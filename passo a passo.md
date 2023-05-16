@@ -244,4 +244,4 @@ export class View<T> {
         }
 ```
 35. habilitando o decorator através do @logarTempoDeExcecucao() em cima do método para calcular o tempo.
-36. reftorador o decorator para receber paramteros True transforma em milesegundos, a medida de tempo
+36. refatorado o decorator para receber paramteros True transforma em milesegundos, a medida de tempo
