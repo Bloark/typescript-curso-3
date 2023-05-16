@@ -17,16 +17,14 @@ export abstract class View<T> {
         }
     }
     
-    @logarTempoDeExcecucao()
-    public update(model: T): void {
-        
+    @logarTempoDeExcecucao(true)
+    public update(model: T): void {        
         let template = this.template(model);
         if (this.escapar) {
             template = template
                 .replace(/<script>[\s\S]*?<\/script>/, '');
         }
-        this.elemento.innerHTML = template;
-     
+        this.elemento.innerHTML = template;     
     }
 
     protected abstract template(model: T): string;
