@@ -245,3 +245,25 @@ export class View<T> {
 ```
 35. habilitando o decorator através do @logarTempoDeExcecucao() em cima do método para calcular o tempo.
 36. refatorado o decorator para receber paramteros True transforma em milesegundos, a medida de tempo
+37. Criado um decorator escapara para refatoração do código.
+```js
+        export function escapar(
+            target: any,
+            propertyKey: string,
+            descriptor: PropertyDescriptor
+        ) {
+            const metodoOrigional = descriptor.value;
+            descriptor.value = function (...args: any[]) {
+                let retorno = metodoOrigional.apply(this, args);
+                if (typeof retorno === 'string') {
+                    console.log(`@escape em ação na classe ${this.constructor.name} para o método ${propertyKey}`)
+                    retorno = retorno
+                        .replace(/<script>[\s\S]*?<\/script>/, '');
+                }
+                return retorno;
+            }
+            return descriptor;        
+        }
+```
+
+38.

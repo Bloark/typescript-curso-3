@@ -13,7 +13,5 @@ export function escapar(
         }
         return retorno;
     }
-
-    return descriptor;
-        
+    return descriptor;        
 }
