@@ -265,9 +265,7 @@ export class View<T> {
             return descriptor;        
         }
 ```
-
 38.Removendo duplicidades criando um decorator para criação de elemnto do DOM.
-
 ```js
         export function domInjector(seletor: string) {
             return function (target: any, propertyKey: string) {
@@ -286,3 +284,4 @@ export class View<T> {
             }
         }
 ```
+39. Aplicando cache decorator copy
