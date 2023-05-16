@@ -93,6 +93,7 @@
 ```
 
 19. Criado a negociacoes-view.ts
+
 ```js
     export class NegociacoesView {
         private elemento: HTMLElement;
@@ -124,10 +125,13 @@
 
 20. inserido métodos para inserir dados na tabela.
 21. configurado a linha para exibição da Data.
+
 ```js
     <td>${new Intl.DateTimeFormat().format(negociacao.data)}</td>
 ```
+
 22. criado a mensagem-View para mostrar uma mensagem quando é adicionado o item.
+
 ```js
 export class MensagemView {
     private element: HTMLElement;
@@ -197,6 +201,7 @@ export class View<T> {
 25. Centralizando updates e aceitando apenas dias uteis.
 26. Refatorado o métodos para dias uteis
 27. criado uma class enums para lidar com os dias da semana.
+
 ```js
     export enum DiasDaSemana {
 
@@ -210,6 +215,32 @@ export class View<T> {
 
     }
 ```
+
 28. implemnetando métodos estátiscos e protegendos o templates de alterações;
 29. Removendo comentários adiocionado no tsconfig "removeComments": true;
 30. Usando o  "strictNullChecks": true
+31. Aplicando  o método TypeScript e Decorators.
+32. Habilitar decorators em typescripts.
+33. tsconfig.json adiconar a linha   "experimentalDecorators": true.
+34. criado Decorator
+```js
+        export function logarTempoDeExcecucao() {
+            return function (
+                target: any,
+                propertyKey: string,
+                descriptor: PropertyDescriptor
+            ) {
+                const metodoOriginal = descriptor.value;
+                descriptor.value = function (...args:any[]) {
+                    const t1 = performance.now();
+                    const retorno = metodoOriginal.apply(this, args);
+                    const t2 = performance.now();
+                    console.log(`${propertyKey}, tempo de execução: ${(t2 - t1) / 1000} segundos`)
+                    retorno
+                };
+
+                return descriptor;
+            }
+        }
+```
+35. habilitando o decorator através do @logarTempoDeExcecucao() em cima do método para calcular o tempo.
