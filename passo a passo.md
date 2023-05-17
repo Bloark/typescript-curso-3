@@ -345,3 +345,22 @@ export class View<T> {
 ```
 47. Criado uma função para imprimir 
 
+```js
+    import { Imprimivel } from "./imprimivel.js";
+        export function imprimir(...objetos: Imprimivel[]) {
+        for (let objeto of objetos) {
+            console.log(objeto.paraTexto());
+        }
+    }
+```
+48. Criaddo um classe Imprimivél e extendida para negociacao e negociacoes
+```js
+    export abstract class Imprimivel {
+        constructor(){}
+        public abstract paraTexto(): string
+    }
+```
+49.
+
+
+
