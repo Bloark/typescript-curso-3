@@ -30,7 +30,7 @@ export class NegociacaoController {
             return;
         }
         this.negociacoes.adiciona(negociacao);
-        imprimir(negociacao);
+        imprimir(negociacao, this.negociacoes);
         this.limparFormulario();
         this.atualizaView();
     }

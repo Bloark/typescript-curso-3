@@ -343,5 +343,5 @@ export class View<T> {
         return JSON.stringify(this.negociacoes, null, 2)   
     }
 ```
-47.
+47. Criado uma função para imprimir 
 
