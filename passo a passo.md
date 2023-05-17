@@ -294,3 +294,7 @@ export class View<T> {
                 return elemento
             }
 ```
+
+40. Acessando uma api externa, npm install dentro da pssta servidor-api
+41. Rodar o servidor-api dentro da pasta npm start
+42. Craido no index botão importar

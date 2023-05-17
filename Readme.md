@@ -19,7 +19,9 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 * npm install
 * npm run start
-* npm run server
+* Dentro da Pasta Servidor-api
+* npm install
+* npm start
 
 ## 🛠️ Construído com
 
