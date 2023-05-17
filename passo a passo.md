@@ -374,6 +374,7 @@ export class View<T> {
             && this.data.getFullYear() === negociacao.data.getFullYear();
     }
 ```
+51. Interface Genericas 
 
 
 
