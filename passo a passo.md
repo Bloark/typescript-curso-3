@@ -388,6 +388,8 @@ export class View<T> {
     export interface Modelo<T> extends Imprimivel, Comparavel<T> {
     }
 ```
+53. Debugando sua aplicações em tsconfig adicione "sourceMap": true
+54. Dentro do modo desenvolvedor no Browser é possivel adicionar breakpoint dentro da linha para debugar.
 
 
 
