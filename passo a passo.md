@@ -316,4 +316,4 @@ export class View<T> {
                 })
         }
 ```
-44.
+44. Definindo uma interface para a API
