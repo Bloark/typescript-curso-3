@@ -44,12 +44,13 @@ export class NegociacaoController {
         }
 
         this.negociacoes.adiciona(negociacao);
+        console.log(negociacao.paraTexto());
+        console.log(this.negociacoes.paraTexto());
         this.limparFormulario();
         this.atualizaView();        
     }
 
-    public importaDados(): void {
-        
+    public importaDados(): void {        
         this.negociacoesService
             .obterNegociacoesDoDia()              
             .then(negociacoesDeHoje => {

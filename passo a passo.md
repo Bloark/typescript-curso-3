@@ -324,5 +324,24 @@ export class View<T> {
                 })
         }
 ```
+
 44. Definindo uma interface para a API
 45. Criando uma camada de serviço
+46. Criando um método para imprimir texto para negociacao e negociacoes
+```js
+        public paraTexto(): string {
+            return `
+                Data: ${this.data},
+                Quantidade: ${this.quantidade},
+                Valor: ${this.valor}
+            `;        
+        }
+```
+
+```js
+    public paraTexto(): string {
+        return JSON.stringify(this.negociacoes, null, 2)   
+    }
+```
+47.
+
