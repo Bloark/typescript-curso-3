@@ -223,6 +223,7 @@ export class View<T> {
 32. Habilitar decorators em typescripts.
 33. tsconfig.json adiconar a linha   "experimentalDecorators": true.
 34. criado Decorator
+
 ```js
         export function logarTempoDeExcecucao() {
             return function (
@@ -243,9 +244,11 @@ export class View<T> {
             }
         }
 ```
+
 35. habilitando o decorator através do @logarTempoDeExcecucao() em cima do método para calcular o tempo.
 36. refatorado o decorator para receber paramteros True transforma em milesegundos, a medida de tempo
 37. Criado um decorator escapara para refatoração do código.
+
 ```js
         export function escapar(
             target: any,
@@ -265,7 +268,9 @@ export class View<T> {
             return descriptor;        
         }
 ```
+
 38.Removendo duplicidades criando um decorator para criação de elemnto do DOM.
+
 ```js
         export function domInjector(seletor: string) {
             return function (target: any, propertyKey: string) {
@@ -284,7 +289,9 @@ export class View<T> {
             }
         }
 ```
+
 39. Aplicando cache decorator copy
+
 ```js
     const getter = function () {
                 if (!elemento) {
@@ -299,6 +306,7 @@ export class View<T> {
 41. Rodar o servidor-api dentro da pasta npm start
 42. Criado no index botão importar
 43. criado o metodo para importar os dados da api.
+
 ```js
     public importaDados(): void {
             fetch('http://localhost:8080/dados')
@@ -317,3 +325,4 @@ export class View<T> {
         }
 ```
 44. Definindo uma interface para a API
+45. Criando uma camada de serviço
