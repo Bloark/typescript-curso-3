@@ -43,10 +43,11 @@ export class NegociacaoController {
 
         this.negociacoes.adiciona(negociacao);
         this.limparFormulario();
-        this.atualizaView();
-        
+        this.atualizaView();        
+    }
 
-        
+    importaDados(): void {
+        alert('oi');
     }
 
     private ehDiaUtil(data: Date) {
