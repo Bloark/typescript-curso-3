@@ -297,4 +297,23 @@ export class View<T> {
 
 40. Acessando uma api externa, npm install dentro da pssta servidor-api
 41. Rodar o servidor-api dentro da pasta npm start
-42. Craido no index botão importar
+42. Criado no index botão importar
+43. criado o metodo para importar os dados da api.
+```js
+    public importaDados(): void {
+            fetch('http://localhost:8080/dados')
+                .then(res => res.json())
+                .then((dados:any[]) => {
+                    return dados.map(dadoDeHoje => {
+                        return new Negociacao(new Date(), dadoDeHoje.vezes, dadoDeHoje.montante)
+                    })
+                })
+                .then(negociacoesDeHoje => {
+                    for(let negociacao of negociacoesDeHoje) {
+                        this.negociacoes.adiciona(negociacao)
+                    }
+                    this.negociacoesView.update(this.negociacoes)
+                })
+        }
+```
+44.
