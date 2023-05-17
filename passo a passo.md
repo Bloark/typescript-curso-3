@@ -360,7 +360,21 @@ export class View<T> {
         public abstract paraTexto(): string
     }
 ```
-49.
+49. Tranformando a classe imprimivél em uma interface
+```js
+    export interface Imprimivel {
+        paraTexto(): string
+    }
+```
+50. Criando método para evitar importar negociações duplicadas
+```js
+  public ehIgual(negociacao: Negociacao): boolean {
+        return this.data.getDate() === negociacao.data.getDate()
+            && this.data.getMonth() === negociacao.data.getMonth()
+            && this.data.getFullYear() === negociacao.data.getFullYear();
+    }
+```
+
 
 
 
